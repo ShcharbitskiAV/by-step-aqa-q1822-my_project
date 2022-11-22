@@ -15,19 +15,20 @@ public class Password {
 
     public void verifyAdminPassword() {
 
-        System.out.print("Ok, you are admin. Please, input your password: ");
+        System.out.print("\nOk, you are admin. Please, input your password: ");
 
         adminPassword = scan.nextLine();
 
         if (adminPassword.equals("admin")) {
 
-            System.out.println("Correct password, you are logged in system");
+            System.out.println("\nCorrect password, you are logged in system");
             System.out.println();
             return;
 
         } else {
 
-            System.out.println("Incorrect password");
+            System.out.println("\nIncorrect password");
+            System.out.println();
 
         }
 

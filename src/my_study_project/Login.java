@@ -10,7 +10,8 @@ public class Login {
 
     public void authorizationLogin() {
 
-        System.out.print("Hello! You are on the site of the Opel car dealer. Please log in system (as admin or user): ");
+        System.out.print("\nHello! You are on the resource of the Opel car dealer. Please log in system (as admin or user): ");
+        System.out.println();
         Scanner scan = new Scanner(System.in);
         String autoriz = scan.nextLine();
 
@@ -30,7 +31,8 @@ public class Login {
 
         } else {
 
-            System.out.println("Incorrect login");
+            System.out.println("\nIncorrect login");
+            System.out.println();
             authorizationLogin();
 
         }

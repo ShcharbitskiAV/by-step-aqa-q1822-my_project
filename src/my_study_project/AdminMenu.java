@@ -123,8 +123,11 @@ public class AdminMenu implements MenuOfAdmin {
 
             autosalonAdmin.set(i, stringAfterChange.toString());
             stringAfterChange = new StringBuilder();
-        } catch (IndexOutOfBoundsException | NullPointerException e) {
+
+        } catch (IndexOutOfBoundsException e) {
             System.err.println(e.getMessage());
+        } catch (NullPointerException ex) {
+            System.err.println(ex.getMessage());
         }
 
         return autosalonAdmin;
