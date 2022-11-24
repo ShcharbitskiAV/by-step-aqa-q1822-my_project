@@ -1,4 +1,4 @@
-package my_study_project;
+package by.step.aqa.q1822.my_study_project.main;
 
 /*
 List of cars before changes:
@@ -10,6 +10,8 @@ List of cars before changes:
 
  */
 
+
+import by.step.aqa.q1822.my_study_project.Login;
 
 public class Main {
 

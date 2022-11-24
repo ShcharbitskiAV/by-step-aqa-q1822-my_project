@@ -1,4 +1,6 @@
-package my_study_project;
+package by.step.aqa.q1822.my_study_project;
+
+import by.step.aqa.q1822.my_study_project.menu.interfaces.MenuOfUser;
 
 import java.util.*;
 
