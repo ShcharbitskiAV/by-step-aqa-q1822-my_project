@@ -1,10 +1,11 @@
-package by.step.aqa.q1822.my_study_project;
+package by.step.aqa.q1822.my_study_project.menu;
 
-import by.step.aqa.q1822.my_study_project.menu.interfaces.MenuOfUser;
+import by.step.aqa.q1822.my_study_project.ListOfCars;
+import by.step.aqa.q1822.my_study_project.Login;
 
 import java.util.*;
 
-public class UserMenu implements MenuOfUser {
+public class UserMenu implements Menu {
 
     private Map<Integer, String> menuForUser = new HashMap<>();
 
@@ -69,6 +70,9 @@ public class UserMenu implements MenuOfUser {
                 System.out.println("Congratulations, you buy a new Opel Grandland!");
                 break;
             }
+            default: {
+                System.out.println("Good choice!");
+            }
         }
     }
 
@@ -90,6 +94,8 @@ public class UserMenu implements MenuOfUser {
     private void controllerOfProgram() {
 
         showMenu();
+
+        Login login = new Login();
 
         int menuPoint = getMenuPoint();
 
@@ -113,12 +119,16 @@ public class UserMenu implements MenuOfUser {
             }
             case (4): {
                 exitFlag = false;
-                System.out.println("Goodbye, have a nice day!");
+                login.authorizationLogin();
                 break;
             }
             default: {
-                System.out.println("Incorrect input");
+                showIncorrectInputMessage();
             }
         }
+    }
+
+    private void showIncorrectInputMessage() {
+        System.out.println("Incorrect input");
     }
 }

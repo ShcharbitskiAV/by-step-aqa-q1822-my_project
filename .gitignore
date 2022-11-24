@@ -55,5 +55,5 @@ bin/
 
 .DS_Store
 
-.idea
-.out
+/.idea*
+/.out

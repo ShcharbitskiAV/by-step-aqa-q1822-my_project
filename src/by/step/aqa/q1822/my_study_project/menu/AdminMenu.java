@@ -1,11 +1,12 @@
-package by.step.aqa.q1822.my_study_project;
+package by.step.aqa.q1822.my_study_project.menu;
 
-import by.step.aqa.q1822.my_study_project.menu.interfaces.MenuOfAdmin;
+import by.step.aqa.q1822.my_study_project.ListOfCars;
+import by.step.aqa.q1822.my_study_project.Login;
 
 import java.io.*;
 import java.util.*;
 
-public class AdminMenu implements MenuOfAdmin {
+public class AdminMenu implements Menu {
 
     private Map<Integer, String> menuForAdmin = new HashMap<>();
 
@@ -54,6 +55,8 @@ public class AdminMenu implements MenuOfAdmin {
 
         showMenu();
 
+        Login login = new Login();
+
         int menuPoint = getMenuPoint();
 
         switch (menuPoint) {
@@ -82,8 +85,12 @@ public class AdminMenu implements MenuOfAdmin {
 
             case (5): {
                 exitFlag = false;
-                System.out.println("Goodbye.");
+                login.authorizationLogin();
                 break;
+            }
+
+            default: {
+                showIncorrectInputMessage();
             }
         }
     }
@@ -218,7 +225,7 @@ public class AdminMenu implements MenuOfAdmin {
         BufferedWriter bufferedWriter = null;
 
         try {
-            bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\my_study_project\\resources\\list_of_cars.txt"));
+            bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\by\\step\\aqa\\q1822\\my_study_project\\resources\\list_of_cars.txt"));
             for (String str : autosalonAdmin
             ) {
                 bufferedWriter.write(str);
@@ -236,5 +243,9 @@ public class AdminMenu implements MenuOfAdmin {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    private void showIncorrectInputMessage() {
+        System.out.println("Incorrect input");
     }
 }
