@@ -1,4 +1,4 @@
-package by.step.aqa.q1822.my_study_project.main;
+package by.step.aqa.q1822.final_project.controller;
 
 /*
 List of cars before changes:
@@ -11,14 +11,14 @@ List of cars before changes:
  */
 
 
-import by.step.aqa.q1822.my_study_project.Login;
+import by.step.aqa.q1822.final_project.service.ValidationOfLogin;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Login login = new Login();
-        login.authorizationLogin();
+        ValidationOfLogin validationOfLogin = new ValidationOfLogin();
+        validationOfLogin.authorizationLogin();
 
     }
 

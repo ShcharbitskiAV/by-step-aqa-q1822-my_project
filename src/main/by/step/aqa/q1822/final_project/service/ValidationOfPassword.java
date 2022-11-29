@@ -1,14 +1,14 @@
-package by.step.aqa.q1822.my_study_project;
+package by.step.aqa.q1822.final_project.service;
 
 import java.util.Scanner;
 
-public class Password {
+public class ValidationOfPassword {
 
     private String adminPassword;
     private String userPassword;
     Scanner scan = new Scanner(System.in);
 
-    public Password(String adminPassword, String userPassword) {
+    public ValidationOfPassword(String adminPassword, String userPassword) {
         this.adminPassword = adminPassword;
         this.userPassword = userPassword;
     }

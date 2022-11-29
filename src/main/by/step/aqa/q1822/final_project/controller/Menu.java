@@ -1,4 +1,4 @@
-package by.step.aqa.q1822.my_study_project.menu;
+package by.step.aqa.q1822.final_project.controller;
 
 public interface Menu {
 

@@ -1,7 +1,7 @@
-package by.step.aqa.q1822.my_study_project.menu;
+package by.step.aqa.q1822.final_project.controller;
 
-import by.step.aqa.q1822.my_study_project.ListOfCars;
-import by.step.aqa.q1822.my_study_project.Login;
+import by.step.aqa.q1822.final_project.dao.ListOfCars;
+import by.step.aqa.q1822.final_project.service.ValidationOfLogin;
 
 import java.util.*;
 
@@ -37,43 +37,11 @@ public class UserMenu implements Menu {
     }
 
 
-    private int getMenuPoint() {
+    int getMenuPoint() {
 
         System.out.println("\nInput an item in menu: ");
         return new Scanner(System.in).nextInt();
 
-    }
-
-
-    private void buyCar() {
-
-        int submenuPoint = getMenuPoint();
-
-        switch (submenuPoint) {
-            case (0): {
-                System.out.println("Congratulations, you buy a new Opel Astra!");
-                break;
-            }
-            case (1): {
-                System.out.println("Congratulations, you buy a new Opel Insignia!");
-                break;
-            }
-            case (2): {
-                System.out.println("Congratulations, you buy a new Opel Corsa!");
-                break;
-            }
-            case (3): {
-                System.out.println("Congratulations, you buy a new Opel Crossland!");
-                break;
-            }
-            case (4): {
-                System.out.println("Congratulations, you buy a new Opel Grandland!");
-                break;
-            }
-            default: {
-                System.out.println("Good choice!");
-            }
-        }
     }
 
     private void showMenu() {
@@ -93,9 +61,11 @@ public class UserMenu implements Menu {
 
     private void controllerOfProgram() {
 
+        BuyCar buyCar = new BuyCar();
+
         showMenu();
 
-        Login login = new Login();
+        ValidationOfLogin validationOfLogin = new ValidationOfLogin();
 
         int menuPoint = getMenuPoint();
 
@@ -113,13 +83,13 @@ public class UserMenu implements Menu {
             case (3): {
                 listOfCars.fileReader();
                 System.out.println("\nIf you want to buy car, select a car from the list.");
-                buyCar();
+                buyCar.buyCarUser();
                 System.out.println();
                 break;
             }
             case (4): {
                 exitFlag = false;
-                login.authorizationLogin();
+                validationOfLogin.authorizationLogin();
                 break;
             }
             default: {

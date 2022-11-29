@@ -1,4 +1,4 @@
-package by.step.aqa.q1822.my_study_project;
+package by.step.aqa.q1822.final_project.dao;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class ListOfCars {
     public List fileReader() {
 
         try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\by\\step\\aqa\\q1822\\my_study_project\\resources\\list_of_cars.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\main\\resources\\list_of_cars.txt"));
             while ((line = bufferedReader.readLine()) != null) {
                 autosalonList.add(line);
             }
@@ -31,7 +31,7 @@ public class ListOfCars {
         BufferedWriter bufferedWriter = null;
 
         try {
-            bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\by\\step\\aqa\\q1822\\my_study_project\\resources\\list_of_cars.txt"));
+            bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\src\\main\\resources\\list_of_cars.txt"));
 
             for (String str1 : autosalonList) {
 
