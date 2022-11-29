@@ -1,4 +1,3 @@
-.git
-.idea
-out
-*.iml
+/.idea
+/out*
+.by-step-aqa-q1822-my_project.iml
