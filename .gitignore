@@ -28,8 +28,7 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-/.out*
 /.idea
-by-step-aqa-q1822-my_project.iml
+.by-step-aqa-q1822-my_project.iml
 
 
